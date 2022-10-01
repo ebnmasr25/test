@@ -12,7 +12,7 @@
 # pip install motor
 
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient # You can use pymongo module also
-MONGO = "mongodb+srv://user:pass@cluster0...." # mongo db url here
+MONGO = "mongodb+srv://ebnmasr:Aaee1122##@clustering0.bew52zk.mongodb.net/?retryWrites=true&w=majority" # mongo db url here
 mongo = MongoClient(MONGO)
 mongodb = mongo.bot # You can change mongo.bot -> mongo.anything to use many bots/apps on same MONGO_URL
 ##################### USERS DB #####################
@@ -65,11 +65,18 @@ async def add_group(chat_id: int):
     
 ##################### Pyrogram Client #####################
 from pyrogram import Client, filters
-api_id = 1234567 # Your API ID Here
-api_hash = "ABCD-EFGH-IJKL-MNOP-QRST-UVWX-1234" # Your API_HASH here
-TOKEN = "Your Bot Token Here"
-app = Client("Session Name", api_id = api_id, api_hash = api_hash, bot_token = TOKEN)
-OWNER = 5117901887 # Bot Owner ID
+app = Client(
+
+    "Song Downloader Bot",
+
+    bot_token = os.environ["BOT_TOKEN"],
+
+    api_id = int(os.environ["API_ID"]),
+
+    api_hash = os.environ["API_HASH"]
+
+)
+OWNER = 5601843091# Bot Owner ID
 ##################### START #####################
 TEXT = """
 **-> New User start your bot !
