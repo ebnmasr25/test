@@ -199,6 +199,7 @@ async def getcopy(client, message):
        await m.delete()
        os.remove(filename2)
 ##################### BORAODCAST #####################
+from pyrogram.types import Message
 USERS_BROADCAST = filters.command("broadcast_users") & filters.user(OWNER)
 USERS_BROADCAST2 = filters.regex("اذاعة بالخاص") & filters.user(OWNER)
 @app.on_message(USERS_BROADCAST)
