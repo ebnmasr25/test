@@ -2,4 +2,7 @@ TgCrypto==1.*
 pyrogram==2.*
 pymongo[srv]
 motor
+sys
 os
+os
+sys
