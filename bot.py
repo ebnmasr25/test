@@ -246,7 +246,7 @@ async def broadcast(c: Client, message: Message):
     
 
 GROUPS_BROADCAST = filters.command("broadcast_groups") & filters.user(OWNER)
-GROUPA_BROADCAST2 = filters.regex("اذاعة بالجروبات") & filters.user(OWNER)
+GROUPS_BROADCAST2 = filters.regex("اذاعة بالجروبات") & filters.user(OWNER)
 @app.on_message(GROUPS_BROADCAST)
 @app.on_message(GROUPS_BROADCAST2)
 async def broadcasttt(c: Client, message: Message):
