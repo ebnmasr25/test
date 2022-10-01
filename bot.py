@@ -10,7 +10,8 @@
 # pip install pymongo[srv]
 # pip install pyrogram
 # pip install motor
-
+import os
+import sys
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient # You can use pymongo module also
 MONGO = "mongodb+srv://ebnmasr:Aaee1122##@clustering0.bew52zk.mongodb.net/?retryWrites=true&w=majority" # mongo db url here
 mongo = MongoClient(MONGO)
@@ -165,7 +166,7 @@ async def stats(client, message):
           STATS_TEXT.foramat(stats,group_stats),
           reply_to_message_id = message.id
       )
-import os
+
 COPY = filters.command("getcopy") & filters.user(OWNER)
 COPY2 = filters.regex("^نسخة احتياطية$") & filters.user(OWNER)
 @app.on_message(COPY)
